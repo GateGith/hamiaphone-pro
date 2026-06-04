@@ -763,3 +763,80 @@ width:100%;
 }
 
 }
+/* HERO CENTER */
+
+.hero-left{
+text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+}
+
+.hero h2{
+max-width:none;
+}
+
+.hero p{
+max-width:700px;
+}
+
+/* BUTTONS CENTER */
+
+.hero-actions,
+.social-row{
+justify-content:center;
+}
+
+/* SERVICES CENTER */
+
+.service{
+text-align:center;
+}
+
+.service h3{
+justify-content:center;
+}
+
+.service ul{
+padding:0;
+list-style:none;
+}
+
+/* WHY US CENTER */
+
+.why .item{
+text-align:center;
+}
+
+/* ADDRESSES CENTER */
+
+.address{
+text-align:center;
+}
+
+.address p,
+.address h3{
+text-align:center;
+}
+
+/* REVIEWS CENTER */
+
+.review{
+text-align:center;
+}
+
+/* CONTACT CENTER */
+
+.contact-box{
+text-align:center;
+}
+
+.contact-list li{
+justify-content:center;
+text-align:center;
+}
+
+.contact-list{
+align-items:center;
+}
