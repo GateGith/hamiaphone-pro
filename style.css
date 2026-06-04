@@ -540,3 +540,23 @@ object-fit:contain;
     width:82%;
   }
   }
+@media(max-width:768px){
+
+.hero-right{
+padding:0;
+}
+
+.hero-image{
+height:320px;
+object-fit:cover;
+}
+
+.brand h1{
+font-size:20px;
+}
+
+.call-pill{
+text-align:center;
+}
+
+}
