@@ -344,13 +344,12 @@ height:320px;
   place-items:end center;
   padding:26px 18px 0;
   background:radial-gradient(circle at center, rgba(225,29,72,.18), transparent 38%),linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01));
-}
-.phone-wrap{
-  width:min(100%,420px);
-  aspect-ratio:1/1.15;
-  display:grid;
-  place-items:end center;
-  position:relative;
+}.phone-wrap{
+width:100%;
+max-width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 .glow{
   position:absolute;
