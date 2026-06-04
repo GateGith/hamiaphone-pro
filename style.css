@@ -761,6 +761,29 @@ width:100%;
 }
 
 }
+.social-link{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+padding:12px;
+margin-top:10px;
+background:#16161d;
+border-radius:12px;
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+.social-link:hover{
+transform:translateY(-2px);
+}
+
+.social-link img{
+width:24px;
+height:24px;
+object-fit:contain;
+}
 /* HERO CENTER */
 
 .hero-left{
