@@ -657,3 +657,12 @@ font-size:15px;
 transform:translateY(-3px);
 transition:.3s;
 }
+.contact-list a{
+color:#ff5b6e;
+font-weight:600;
+text-decoration:none;
+}
+
+.contact-list a:hover{
+text-decoration:underline;
+}
