@@ -907,3 +907,33 @@ color:white;
 text-decoration:none;
 font-weight:bold;
 }
+.social-row{
+display:flex;
+gap:12px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.social{
+display:flex;
+align-items:center;
+gap:10px;
+padding:14px 18px;
+border-radius:14px;
+background:#16161d;
+color:white;
+text-decoration:none;
+font-weight:600;
+width:180px;
+justify-content:center;
+transition:0.2s;
+}
+
+.social i{
+font-size:20px;
+}
+
+.social:hover{
+transform:scale(1.05);
+background:#222230;
+}
