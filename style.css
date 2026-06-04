@@ -610,3 +610,50 @@ margin:auto;
 .section-card{
 width:100%;
     }
+.section-card{
+max-width:1120px;
+margin:0 auto;
+}
+
+.hero{
+max-width:1120px;
+margin:0 auto;
+}
+
+.topbar{
+max-width:1120px;
+margin:10px auto;
+}
+@media(max-width:768px){
+
+.nav{
+justify-content:center;
+gap:6px;
+}
+
+.nav a{
+font-size:13px;
+padding:6px 8px;
+}
+
+.call-pill{
+font-size:12px;
+padding:8px 10px;
+}
+
+}
+.gallery img{
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:18px;
+}
+.review{
+line-height:1.8;
+font-size:15px;
+}
+
+.review:hover{
+transform:translateY(-3px);
+transition:.3s;
+}
