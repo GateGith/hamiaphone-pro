@@ -220,3 +220,14 @@ justify-content:center;
 }
 
 }
+/* Hamiaphone Hero Upgrade */
+
+.hero{
+background:
+linear-gradient(
+135deg,
+#d6001c 0%,
+#7a0010 35%,
+#0b0b0f 100%
+) !important;
+}
