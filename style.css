@@ -231,3 +231,146 @@ linear-gradient(
 #0b0b0f 100%
 ) !important;
 }
+/* =========================
+MOBILE FIX V2
+========================= */
+
+@media(max-width:768px){
+
+.grid{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-grid{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.card{
+width:100%;
+}
+
+.hero{
+padding:40px 20px;
+}
+
+.hero h1{
+font-size:28px;
+line-height:1.2;
+}
+
+.hero img{
+width:100%;
+height:auto;
+border-radius:15px;
+margin-top:20px;
+}
+
+.section{
+padding:40px 15px;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+}
+
+/* =========================
+NOS DEUX BOUTIQUES
+========================= */
+
+.shop-card{
+background:#1b1b25;
+border-radius:18px;
+overflow:hidden;
+padding:15px;
+}
+
+.shop-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:15px;
+}
+
+@media(max-width:768px){
+
+.shop-card img{
+height:220px;
+}
+
+}
+
+/* =========================
+PRODUCTS
+========================= */
+
+.products-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
+
+.products-grid img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:15px;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+.contact-card{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:10px;
+
+background:#1b1b25;
+
+padding:18px;
+
+border-radius:15px;
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+}
+
+.contact-card i{
+font-size:20px;
+}
+
+/* =========================
+REVIEWS
+========================= */
+
+.review{
+background:#1b1b25;
+padding:20px;
+border-radius:18px;
+margin-bottom:15px;
+text-align:center;
+}
+
+/* =========================
+REMOVE HUGE SPACES
+========================= */
+
+h2{
+margin-bottom:20px;
+}
+
+.section{
+margin-bottom:20px;
+  }
