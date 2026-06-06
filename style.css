@@ -374,3 +374,19 @@ margin-bottom:20px;
 .section{
 margin-bottom:20px;
   }
+.shop-card img{
+width:100%;
+max-width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+display:block;
+}
+
+@media(max-width:768px){
+
+.shop-card img{
+height:200px;
+}
+
+}
