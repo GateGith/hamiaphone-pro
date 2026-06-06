@@ -153,10 +153,19 @@ gap:20px;
 }
 
 .card{
-background:#1b1b25;
-padding:25px;
-border-radius:18px;
-text-align:center;
+background:linear-gradient(
+135deg,
+#1f2937,
+#374151
+);
+
+border:1px solid rgba(255,255,255,.08);
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.35);
+
+padding:20px;
+border-radius:20px;
 }
 
 .gallery{
@@ -244,13 +253,21 @@ justify-content:center;
 /* Hamiaphone Hero Upgrade */
 
 .hero{
+
 background:
+
 linear-gradient(
 135deg,
-#d6001c 0%,
-#7a0010 35%,
-#0b0b0f 100%
-) !important;
+rgba(140,0,0,.9),
+rgba(20,20,20,.95)
+),
+
+url("images/products.jpg");
+
+background-size:cover;
+
+background-position:center;
+
 }
 /* =========================
 MOBILE FIX V2
@@ -344,6 +361,35 @@ height:220px;
 object-fit:cover;
 border-radius:15px;
 }
+.products-grid img{
+
+border-radius:20px;
+
+transition:.4s;
+
+box-shadow:
+0 15px 30px rgba(0,0,0,.35);
+
+}
+
+.products-grid img:hover{
+
+transform:scale(1.04);
+
+}
+.products-section{
+
+background:
+linear-gradient(
+135deg,
+#4a0404,
+#7f1d1d
+);
+
+border-radius:25px;
+
+padding:30px;
+}
 
 /* =========================
 CONTACT
@@ -377,11 +423,16 @@ REVIEWS
 ========================= */
 
 .review{
-background:#1b1b25;
-padding:20px;
-border-radius:18px;
-margin-bottom:15px;
-text-align:center;
+
+background:
+linear-gradient(
+135deg,
+#1e293b,
+#334155
+);
+
+border-left:5px solid #ef4444;
+
 }
 
 /* =========================
@@ -395,6 +446,18 @@ margin-bottom:20px;
 .section{
 margin-bottom:20px;
   }
+.shop-card{
+
+background:
+linear-gradient(
+135deg,
+#111827,
+#1f2937
+);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
 .shop-card img{
 width:100%;
 max-width:100%;
@@ -444,27 +507,32 @@ transform:translateY(-6px);
 }
 
 .phone{
-background:linear-gradient(135deg,#111,#333);
+background:
+linear-gradient(
+135deg,
+#374151,
+#4b5563
+);
 }
 
 .instagram{
-background:linear-gradient(
+background:
+linear-gradient(
 135deg,
 #f58529,
 #dd2a7b,
-#8134af,
-#515bd4
+#8134af
 );
 }
 
 .facebook{
-background:linear-gradient(
+background:
+linear-gradient(
 135deg,
 #1877f2,
 #0d5ed7
 );
-}
-.map-btn{
+}.map-btn{
 display:inline-flex;
 align-items:center;
 gap:10px;
