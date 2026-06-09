@@ -323,6 +323,20 @@ body {
   color: #ff5e5e;
 }
 
+/* ===== HORIZONTAL SHOPS (côte à côte) ===== */
+.shops-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.shops-horizontal .shop-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+}
+
 /* ===== PRODUCT GALLERY ===== */
 .products {
   display: grid;
@@ -419,6 +433,54 @@ body {
   font-size: 1.3rem;
 }
 
+/* ===== ADDRESS ROW (horizontal, sans "cliquables") ===== */
+.address-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  background: rgba(17, 17, 23, 0.9);
+  border-radius: 50px;
+  padding: 30px 25px;
+  backdrop-filter: blur(8px);
+  border: 1px solid #ff4d4d30;
+}
+.address-card {
+  flex: 1;
+  min-width: 260px;
+  text-align: center;
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 32px;
+  transition: 0.2s;
+}
+.address-card:hover {
+  background: rgba(255, 75, 75, 0.08);
+  transform: translateY(-3px);
+}
+.address-card i {
+  font-size: 2rem;
+  color: #ff7a5c;
+  margin-bottom: 12px;
+  display: block;
+}
+.address-card p {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+.address-card a {
+  color: #ffb47b;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px dashed rgba(255, 180, 123, 0.5);
+  transition: 0.2s;
+}
+.address-card a:hover {
+  color: #ffd6ae;
+  border-bottom-style: solid;
+}
+
 /* ===== FOOTER ===== */
 footer {
   text-align: center;
@@ -427,6 +489,7 @@ footer {
   opacity: 0.8;
   font-size: 0.9rem;
   background: #050508;
+  margin-top: 20px;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -465,6 +528,20 @@ footer {
   .shop-card img {
     height: 200px;
   }
+  .shops-horizontal {
+    flex-direction: column;
+    align-items: center;
+  }
+  .address-row {
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    padding: 25px 20px;
+  }
+  .address-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -486,6 +563,9 @@ footer {
     padding: 14px 12px;
     font-size: 0.9rem;
   }
+  .address-card {
+    min-width: 240px;
+  }
 }
 
 /* ===== UTILITY & ADDITIONAL 3D GADGET ===== */
@@ -502,7 +582,7 @@ i.fa-star, i.fa-star-half-alt {
   transform: scale(1.1);
 }
 
-/* custom glow */
+/* custom glow for shop cards */
 .shop-card .map-trigger a i {
   margin-right: 4px;
 }
@@ -510,4 +590,33 @@ i.fa-star, i.fa-star-half-alt {
 /* make sure all links are clearly clickable */
 a[href^="tel"], a[href^="https://wa.me"], .contact-card, .btn, .socials a {
   cursor: pointer;
+}
+
+/* smooth container for all sections */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* additional hover effect for stat cards */
+.card h3 {
+  background: linear-gradient(135deg, #fff, #ffc0a0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+}
+
+/* fix for any overflow issues */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ensure buttons have proper z-index */
+.btn, .contact-card, .socials a {
+  position: relative;
+  z-index: 2;
 }
