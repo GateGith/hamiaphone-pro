@@ -231,28 +231,36 @@ body {
   border-radius: 4px;
 }
 
-/* ===== CARDS 3D PREMIUM ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+/* ===== SERVICES GRID: 3 en haut + 1 centré en bas ===== */
+.services-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 30px;
 }
-.card, .shop-card {
+.services-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.service-card {
   background: linear-gradient(145deg, #1f1f2c, #121217);
   border-radius: 32px;
-  padding: 28px 20px;
+  padding: 32px 24px;
   text-align: center;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 85, 85, 0.2);
   backdrop-filter: blur(2px);
+  width: 280px;
 }
-.card:hover, .shop-card:hover {
+.service-card:hover {
   transform: translateY(-10px);
   border-color: #ff6a6a;
   box-shadow: 0 30px 40px -15px #ff3b3b30, 0 0 0 1px rgba(255, 100, 100, 0.3) inset;
 }
-.card i, .shop-card i {
+.service-card i {
   font-size: 2.8rem;
   margin-bottom: 15px;
   background: linear-gradient(135deg, #ff8a5c, #ff4d4d);
@@ -260,13 +268,84 @@ body {
   background-clip: text;
   color: transparent;
 }
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+.service-card p {
+  opacity: 0.8;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+.single-center {
+  display: flex;
+  justify-content: center;
+}
+
+/* ===== STATS CARDS ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+.card {
+  background: linear-gradient(145deg, #1f1f2c, #121217);
+  border-radius: 32px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 85, 85, 0.2);
+}
+.card:hover {
+  transform: translateY(-10px);
+  border-color: #ff6a6a;
+  box-shadow: 0 30px 40px -15px #ff3b3b30;
+}
 .card h3 {
-  font-size: 1.6rem;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #fff, #ffc0a0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 8px;
+}
+.card p {
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+.card i {
+  font-size: 2rem;
+  opacity: 0.7;
+}
+
+/* ===== HORIZONTAL SHOPS (côte à côte) ===== */
+.shops-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.shop-card {
+  background: linear-gradient(145deg, #1f1f2c, #121217);
+  border-radius: 32px;
+  padding: 25px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 500px;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  border: 1px solid rgba(255, 85, 85, 0.2);
+}
+.shop-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff6a6a;
+  box-shadow: 0 30px 40px -15px #ff3b3b30;
 }
 .shop-card img {
   width: 100%;
-  height: 240px;
+  height: 220px;
   object-fit: cover;
   border-radius: 24px;
   margin-bottom: 20px;
@@ -277,8 +356,9 @@ body {
   transform: scale(1.02);
 }
 .shop-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin-bottom: 12px;
+  text-align: center;
 }
 .shop-card p {
   margin: 8px 0;
@@ -323,20 +403,6 @@ body {
   color: #ff5e5e;
 }
 
-/* ===== HORIZONTAL SHOPS (côte à côte) ===== */
-.shops-horizontal {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  margin-top: 20px;
-}
-.shops-horizontal .shop-card {
-  flex: 1;
-  min-width: 280px;
-  max-width: 500px;
-}
-
 /* ===== PRODUCT GALLERY ===== */
 .products {
   display: grid;
@@ -378,6 +444,9 @@ body {
   border: 2px solid #ff7a5c;
   padding: 3px;
 }
+.review p {
+  margin: 10px 0;
+}
 
 /* ===== DELIVERY SECTION 3D ===== */
 .delivery {
@@ -399,6 +468,10 @@ body {
 }
 .delivery img:hover {
   transform: scale(1.02);
+}
+.delivery p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* ===== CONTACT CARDS ===== */
@@ -428,9 +501,6 @@ body {
   background: #ff4d4d30;
   border-color: #ff7a5c;
   box-shadow: 0 15px 25px -12px #ff3b3b50;
-}
-.phone i, .instagram i, .facebook i {
-  font-size: 1.3rem;
 }
 
 /* ===== ADDRESS ROW (horizontal, sans "cliquables") ===== */
@@ -522,11 +592,9 @@ footer {
   .section h2 {
     font-size: 2.2rem;
   }
-  .card, .shop-card {
-    padding: 22px 16px;
-  }
-  .shop-card img {
-    height: 200px;
+  .service-card {
+    width: 100%;
+    max-width: 320px;
   }
   .shops-horizontal {
     flex-direction: column;
@@ -541,6 +609,10 @@ footer {
   .address-card {
     width: 100%;
     max-width: 350px;
+  }
+  .review {
+    margin: 0 20px;
+    padding: 25px;
   }
 }
 
@@ -566,25 +638,20 @@ footer {
   .address-card {
     min-width: 240px;
   }
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+  .service-card p {
+    font-size: 0.85rem;
+  }
 }
 
 /* ===== UTILITY & ADDITIONAL 3D GADGET ===== */
-.card h3, .shop-card h3 {
-  font-weight: 700;
-}
-i.fa-star, i.fa-star-half-alt {
-  color: #ffcd4a;
-}
 .btn i, .contact-card i {
   transition: transform 0.2s;
 }
 .btn:hover i, .contact-card:hover i {
   transform: scale(1.1);
-}
-
-/* custom glow for shop cards */
-.shop-card .map-trigger a i {
-  margin-right: 4px;
 }
 
 /* make sure all links are clearly clickable */
@@ -599,15 +666,6 @@ a[href^="tel"], a[href^="https://wa.me"], .contact-card, .btn, .socials a {
   margin: 0 auto;
 }
 
-/* additional hover effect for stat cards */
-.card h3 {
-  background: linear-gradient(135deg, #fff, #ffc0a0);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-size: 2rem;
-}
-
 /* fix for any overflow issues */
 img {
   max-width: 100%;
@@ -619,4 +677,31 @@ img {
 .btn, .contact-card, .socials a {
   position: relative;
   z-index: 2;
+}
+
+/* stars color fix */
+.fa-star, .fa-star-half-alt {
+  color: #ffcd4a;
+}
+
+/* additional glow for cards */
+.card i, .service-card i {
+  display: inline-block;
+}
+
+/* center alignment for all text in cards */
+.service-card, .card, .shop-card {
+  text-align: center;
+}
+
+/* responsive improvements for services row */
+@media (max-width: 680px) {
+  .services-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
