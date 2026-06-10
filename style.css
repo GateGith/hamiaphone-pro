@@ -376,16 +376,110 @@ footer {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; text-align: center; padding: 50px 24px; }
-  .hero h1 { font-size: 2.8rem; }
-  .navbar { flex-direction: column; gap: 15px; padding: 16px 20px; }
-  .menu { flex-wrap: wrap; justify-content: center; }
-  .section { padding: 55px 24px; }
-  .service-card { width: 100%; max-width: 320px; }
-  .shops-horizontal { flex-direction: column; align-items: center; }
-  .address-row { flex-direction: column; align-items: center; }
-  .products img { max-width: 100%; }
+@media (max-width: 768px) {
+  /* الهيدر */
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .hero h1 { font-size: 2.2rem; }
+  .hero-buttons, .socials { justify-content: center; }
+  
+  /* النافبار */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* جميع الأقسام */
+  .section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .section h2 { font-size: 1.8rem; }
+  
+  /* الخدمات */
+  .services-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  /* البوتيكات - الموقعين */
+  .shops-horizontal {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  .shop-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .shop-card img {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  .map-trigger {
+    display: inline-flex;
+    margin: 15px auto 0 auto;
+  }
+  
+  /* العناوين - الإطارين */
+  .address-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  .address-card {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .address-card .shop-img {
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+  .address-card a {
+    display: inline-flex;
+    margin: 10px auto 0 auto;
+  }
+  
+  /* جهات الاتصال */
+  .contact-card {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+  
+  /* التوصيل */
+  .delivery img { max-width: 130px; margin: 0 auto; }
+  .delivery-badge { display: inline-block; margin: 0 auto; }
+  
+  /* المنتجات */
+  .products img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  /* الإحصائيات */
+  .card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 550px) {
