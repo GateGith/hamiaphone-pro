@@ -13,7 +13,7 @@ body {
   line-height: 1.5;
 }
 
-/* Custom scrollbar for modern look */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -114,7 +114,7 @@ body {
   text-shadow: 0 0 5px rgba(255, 75, 75, 0.3);
 }
 
-/* ===== HERO SECTION 3D EFFECTS ===== */
+/* ===== HERO SECTION ===== */
 .hero {
   max-width: 1300px;
   margin: 0 auto;
@@ -146,6 +146,7 @@ body {
   gap: 18px;
   flex-wrap: wrap;
   margin-bottom: 25px;
+  justify-content: center;
 }
 .btn {
   padding: 14px 28px;
@@ -164,7 +165,7 @@ body {
   background: linear-gradient(95deg, #dc2626, #b91c1c);
 }
 .btn.green {
-  background: linear-gradient(95deg, #22c55e, #16a34a);
+  background: #25D366;
 }
 .btn:hover {
   transform: translateY(-4px);
@@ -175,6 +176,7 @@ body {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .socials a {
   padding: 10px 22px;
@@ -185,19 +187,22 @@ body {
   align-items: center;
   gap: 8px;
   transition: 0.2s;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+}
+.socials a.instagram {
+  background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5);
+}
+.socials a.facebook {
+  background: #1877F2;
 }
 .socials a:hover {
   transform: scale(1.03);
-  background: rgba(255, 75, 75, 0.15);
-  border-color: #ff6a6a;
+  filter: brightness(1.05);
 }
 .hero-image img {
   width: 100%;
   border-radius: 32px;
-  box-shadow: 0 30px 40px -20px black, 0 0 0 2px rgba(255, 75, 75, 0.2), 0 20px 35px -10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 30px 40px -20px black, 0 0 0 2px rgba(255, 75, 75, 0.2);
   transition: 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
 }
 .hero-image img:hover {
@@ -231,7 +236,7 @@ body {
   border-radius: 4px;
 }
 
-/* ===== SERVICES GRID: 3 en haut + 1 centré en bas ===== */
+/* ===== SERVICES GRID: 3 top + 1 bottom centered ===== */
 .services-grid {
   display: flex;
   flex-direction: column;
@@ -320,7 +325,7 @@ body {
   opacity: 0.7;
 }
 
-/* ===== HORIZONTAL SHOPS (côte à côte) ===== */
+/* ===== HORIZONTAL SHOPS ===== */
 .shops-horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -337,6 +342,7 @@ body {
   max-width: 500px;
   transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
   border: 1px solid rgba(255, 85, 85, 0.2);
+  text-align: center;
 }
 .shop-card:hover {
   transform: translateY(-8px);
@@ -358,7 +364,6 @@ body {
 .shop-card h3 {
   font-size: 1.4rem;
   margin-bottom: 12px;
-  text-align: center;
 }
 .shop-card p {
   margin: 8px 0;
@@ -380,27 +385,28 @@ body {
   border-bottom-style: solid;
 }
 
-/* Map trigger badge */
+/* Map trigger - Google Maps real color */
 .map-trigger {
   margin-top: 15px;
   display: inline-flex;
-  background: #252530cc;
+  background: #EA4335;
   padding: 8px 18px;
   border-radius: 40px;
   gap: 8px;
   transition: 0.2s;
-  backdrop-filter: blur(4px);
 }
 .map-trigger a {
-  color: #ffbd84;
+  color: white;
   text-decoration: none;
   font-weight: 500;
 }
 .map-trigger i {
   font-size: 1rem;
-  background: none;
-  -webkit-background-clip: unset;
-  color: #ff5e5e;
+  color: white;
+}
+.map-trigger:hover {
+  background: #c5221f;
+  transform: scale(1.02);
 }
 
 /* ===== PRODUCT GALLERY ===== */
@@ -448,7 +454,7 @@ body {
   margin: 10px 0;
 }
 
-/* ===== DELIVERY SECTION 3D ===== */
+/* ===== DELIVERY SECTION - FIXED IMAGE SIZE ===== */
 .delivery {
   text-align: center;
   background: linear-gradient(115deg, #1f1a24, #14121a);
@@ -457,12 +463,15 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 24px;
   box-shadow: 0 20px 35px -12px black;
   border: 1px solid rgba(255, 100, 100, 0.3);
 }
 .delivery img {
-  max-width: 220px;
+  max-width: 180px;
+  width: 100%;
+  height: auto;
   border-radius: 32px;
   transition: 0.3s;
 }
@@ -474,81 +483,104 @@ body {
   line-height: 1.6;
 }
 
-/* ===== CONTACT CARDS ===== */
+/* ===== CONTACT CARDS - REAL BRAND COLORS, CENTERED ===== */
 .contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .contact-card {
-  background: rgba(30, 30, 40, 0.9);
-  padding: 18px 20px;
+  padding: 18px 28px;
   border-radius: 60px;
   text-decoration: none;
   color: white;
   font-weight: bold;
-  display: flex;
-  justify-content: center;
+  display: inline-flex;
   align-items: center;
   gap: 12px;
   transition: all 0.25s;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  font-size: 1.05rem;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+.contact-card.phone {
+  background: #34B7F1;
+}
+.contact-card.instagram {
+  background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5);
+}
+.contact-card.facebook {
+  background: #1877F2;
+}
+.contact-card.whatsapp {
+  background: #25D366;
 }
 .contact-card:hover {
-  transform: scale(1.03);
-  background: #ff4d4d30;
-  border-color: #ff7a5c;
-  box-shadow: 0 15px 25px -12px #ff3b3b50;
+  transform: scale(1.05);
+  filter: brightness(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ===== ADDRESS ROW (horizontal, sans "cliquables") ===== */
+/* ===== ADDRESS ROW WITH IMAGES ===== */
 .address-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-  background: rgba(17, 17, 23, 0.9);
-  border-radius: 50px;
-  padding: 30px 25px;
-  backdrop-filter: blur(8px);
-  border: 1px solid #ff4d4d30;
+  gap: 40px;
+  margin-top: 50px;
 }
 .address-card {
   flex: 1;
-  min-width: 260px;
+  min-width: 280px;
+  max-width: 450px;
+  background: linear-gradient(145deg, #1f1f2c, #121217);
+  border-radius: 36px;
+  padding: 25px;
   text-align: center;
-  padding: 20px 15px;
-  background: rgba(0, 0, 0, 0.35);
-  border-radius: 32px;
-  transition: 0.2s;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 85, 85, 0.2);
 }
 .address-card:hover {
-  background: rgba(255, 75, 75, 0.08);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  border-color: #ff6a6a;
+  box-shadow: 0 20px 30px -12px #ff3b3b20;
+}
+.address-card .shop-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .address-card i {
   font-size: 2rem;
   color: #ff7a5c;
-  margin-bottom: 12px;
-  display: block;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 .address-card p {
   margin: 10px 0;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 .address-card a {
-  color: #ffb47b;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #EA4335;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 40px;
   text-decoration: none;
-  font-weight: 500;
-  border-bottom: 1px dashed rgba(255, 180, 123, 0.5);
+  font-weight: 600;
+  margin-top: 12px;
   transition: 0.2s;
 }
 .address-card a:hover {
-  color: #ffd6ae;
-  border-bottom-style: solid;
+  transform: scale(1.02);
+  background: #c5221f;
 }
 
 /* ===== FOOTER ===== */
@@ -603,16 +635,13 @@ footer {
   .address-row {
     flex-direction: column;
     align-items: center;
-    border-radius: 40px;
-    padding: 25px 20px;
   }
-  .address-card {
-    width: 100%;
-    max-width: 350px;
+  .contact-card {
+    padding: 12px 20px;
+    font-size: 0.9rem;
   }
-  .review {
-    margin: 0 20px;
-    padding: 25px;
+  .delivery img {
+    max-width: 150px;
   }
 }
 
@@ -632,11 +661,11 @@ footer {
     font-size: 1.9rem;
   }
   .contact-card {
-    padding: 14px 12px;
-    font-size: 0.9rem;
+    padding: 10px 16px;
+    font-size: 0.85rem;
   }
   .address-card {
-    min-width: 240px;
+    min-width: 260px;
   }
   .service-card h3 {
     font-size: 1.3rem;
@@ -644,9 +673,12 @@ footer {
   .service-card p {
     font-size: 0.85rem;
   }
+  .delivery img {
+    max-width: 130px;
+  }
 }
 
-/* ===== UTILITY & ADDITIONAL 3D GADGET ===== */
+/* ===== UTILITY CLASSES ===== */
 .btn i, .contact-card i {
   transition: transform 0.2s;
 }
@@ -654,47 +686,26 @@ footer {
   transform: scale(1.1);
 }
 
-/* make sure all links are clearly clickable */
 a[href^="tel"], a[href^="https://wa.me"], .contact-card, .btn, .socials a {
   cursor: pointer;
 }
 
-/* smooth container for all sections */
-.container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-/* fix for any overflow issues */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* ensure buttons have proper z-index */
-.btn, .contact-card, .socials a {
+.btn, .contact-card, .socials a, .map-trigger {
   position: relative;
   z-index: 2;
 }
 
-/* stars color fix */
 .fa-star, .fa-star-half-alt {
   color: #ffcd4a;
 }
 
-/* additional glow for cards */
-.card i, .service-card i {
-  display: inline-block;
-}
-
-/* center alignment for all text in cards */
-.service-card, .card, .shop-card {
-  text-align: center;
-}
-
-/* responsive improvements for services row */
+/* Services row responsive fix */
 @media (max-width: 680px) {
   .services-row {
     flex-direction: column;
