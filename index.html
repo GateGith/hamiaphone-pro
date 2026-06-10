@@ -41,7 +41,6 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.6);
     }
     .logo-area { display: flex; align-items: center; gap: 15px; }
     .logo-area img { width: 55px; height: 55px; border-radius: 18px; object-fit: cover; }
@@ -60,14 +59,16 @@
     }
     .hero-content h1 { font-size: 3.8rem; font-weight: 800; background: linear-gradient(125deg, #FFFFFF, #ff9a6e, #ff5e5e); -webkit-background-clip: text; background-clip: text; color: transparent; margin-bottom: 20px; }
     .hero-content p { font-size: 1.1rem; opacity: 0.85; margin-bottom: 25px; }
-    .hero-buttons { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 25px; }
-    .btn { padding: 14px 28px; border-radius: 40px; font-weight: 700; text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 10px; transition: 0.25s; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+    .hero-buttons { display: flex; gap: 18px; flex-wrap: wrap; margin-bottom: 25px; justify-content: center; }
+    .btn { padding: 14px 28px; border-radius: 40px; font-weight: 700; text-decoration: none; color: white; display: inline-flex; align-items: center; gap: 10px; transition: 0.25s; }
     .btn.red { background: linear-gradient(95deg, #dc2626, #b91c1c); }
-    .btn.green { background: linear-gradient(95deg, #22c55e, #16a34a); }
+    .btn.green { background: #25D366; } /* WhatsApp real color */
     .btn:hover { transform: translateY(-4px); filter: brightness(1.08); }
-    .socials { display: flex; gap: 20px; flex-wrap: wrap; }
-    .socials a { padding: 10px 22px; border-radius: 40px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.12); transition: 0.2s; }
-    .socials a:hover { background: rgba(255,75,75,0.15); transform: scale(1.03); }
+    .socials { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
+    .socials a { padding: 10px 22px; border-radius: 40px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 8px; transition: 0.2s; }
+    .socials a.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5); color: white; }
+    .socials a.facebook { background: #1877F2; color: white; }
+    .socials a:hover { transform: scale(1.03); }
     .hero-image img { width: 100%; border-radius: 32px; box-shadow: 0 30px 40px -20px black; transition: 0.4s; }
     .hero-image img:hover { transform: scale(1.02); }
 
@@ -76,86 +77,158 @@
     .section h2 { text-align: center; font-size: 2.6rem; font-weight: 700; margin-bottom: 50px; position: relative; width: 100%; }
     .section h2:after { content: ''; width: 80px; height: 4px; background: linear-gradient(90deg, #ff4d4d, #ffa258); display: block; margin: 16px auto 0; border-radius: 4px; }
 
-    /* Services Grid: 3 en haut, 1 en bas centré */
-    .services-grid {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 30px;
-    }
-    .services-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-    }
+    /* Services: 3 top + 1 bottom centered */
+    .services-grid { display: flex; flex-direction: column; align-items: center; gap: 30px; }
+    .services-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
     .service-card {
       background: linear-gradient(145deg, #1f1f2c, #121217);
-      border-radius: 32px;
-      padding: 32px 24px;
-      text-align: center;
-      transition: all 0.3s cubic-bezier(0.2,0.9,0.4,1.1);
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,85,85,0.2);
-      width: 280px;
+      border-radius: 32px; padding: 32px 24px; text-align: center;
+      transition: 0.3s; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,85,85,0.2); width: 280px;
     }
     .service-card:hover { transform: translateY(-10px); border-color: #ff6a6a; }
     .service-card i { font-size: 2.8rem; margin-bottom: 15px; background: linear-gradient(135deg, #ff8a5c, #ff4d4d); -webkit-background-clip: text; background-clip: text; color: transparent; }
     .service-card h3 { font-size: 1.5rem; margin-bottom: 12px; }
     .service-card p { opacity: 0.8; font-size: 0.95rem; }
-    .single-center {
-      display: flex;
-      justify-content: center;
-    }
+    .single-center { display: flex; justify-content: center; }
 
-    /* Stats Grid */
+    /* Stats */
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-    .card { background: linear-gradient(145deg, #1f1f2c, #121217); border-radius: 32px; padding: 28px 20px; text-align: center; transition: 0.3s; box-shadow: 0 20px 35px -12px rgba(0,0,0,0.6); border: 1px solid rgba(255,85,85,0.2); }
+    .card { background: linear-gradient(145deg, #1f1f2c, #121217); border-radius: 32px; padding: 28px 20px; text-align: center; transition: 0.3s; border: 1px solid rgba(255,85,85,0.2); }
     .card:hover { transform: translateY(-10px); border-color: #ff6a6a; }
     .card h3 { font-size: 2rem; background: linear-gradient(135deg, #fff, #ffc0a0); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
     /* Shops Horizontal */
     .shops-horizontal { display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; margin-top: 20px; }
-    .shop-card { background: linear-gradient(145deg, #1f1f2c, #121217); border-radius: 32px; padding: 25px; flex: 1; min-width: 280px; max-width: 500px; transition: 0.3s; border: 1px solid rgba(255,85,85,0.2); }
+    .shop-card {
+      background: linear-gradient(145deg, #1f1f2c, #121217);
+      border-radius: 32px; padding: 25px; flex: 1; min-width: 280px; max-width: 500px;
+      transition: 0.3s; border: 1px solid rgba(255,85,85,0.2); text-align: center;
+    }
     .shop-card:hover { transform: translateY(-8px); border-color: #ff6a6a; }
     .shop-card img { width: 100%; height: 220px; object-fit: cover; border-radius: 24px; margin-bottom: 20px; }
-    .shop-card h3 { font-size: 1.4rem; margin-bottom: 12px; text-align: center; }
-    .shop-card p { margin: 8px 0; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .shop-card h3 { font-size: 1.4rem; margin-bottom: 12px; }
+    .shop-card p { margin: 8px 0; display: flex; align-items: center; justify-content: center; gap: 8px; flex-wrap: wrap; }
     .shop-card a { color: #ff9f6e; text-decoration: none; font-weight: 600; }
-    .map-trigger { margin-top: 15px; display: inline-flex; background: #252530cc; padding: 8px 18px; border-radius: 40px; gap: 8px; }
+    .map-trigger { margin-top: 15px; display: inline-flex; background: #EA4335; padding: 8px 18px; border-radius: 40px; gap: 8px; color: white; }
+    .map-trigger a { color: white; text-decoration: none; font-weight: 500; }
+    .map-trigger i { color: white; }
 
     /* Products */
     .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
     .products img { width: 100%; height: 280px; object-fit: cover; border-radius: 32px; transition: 0.35s; cursor: pointer; }
     .products img:hover { transform: scale(1.03); }
 
-    /* Review & Delivery */
+    /* Review */
     .review { background: linear-gradient(115deg, #181822, #101016); padding: 35px; border-radius: 48px; text-align: center; max-width: 750px; margin: 0 auto; border: 1px solid #ff4d4d30; }
     .review img { max-width: 85px; border-radius: 100px; margin-bottom: 18px; border: 2px solid #ff7a5c; }
-    .delivery { text-align: center; background: linear-gradient(115deg, #1f1a24, #14121a); padding: 45px 30px; border-radius: 60px; display: flex; flex-direction: column; align-items: center; gap: 24px; }
 
-    /* Contact */
-    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 25px; }
-    .contact-card { background: rgba(30,30,40,0.9); padding: 18px 20px; border-radius: 60px; text-decoration: none; color: white; font-weight: bold; display: flex; justify-content: center; align-items: center; gap: 12px; transition: 0.25s; border: 1px solid rgba(255,255,255,0.08); }
-    .contact-card:hover { background: #ff4d4d30; transform: scale(1.03); }
+    /* Delivery - fixed large image inside frame */
+    .delivery {
+      text-align: center;
+      background: linear-gradient(115deg, #1f1a24, #14121a);
+      padding: 45px 30px;
+      border-radius: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      border: 1px solid rgba(255, 100, 100, 0.3);
+    }
+    .delivery img {
+      max-width: 180px;
+      width: 100%;
+      height: auto;
+      border-radius: 32px;
+      transition: 0.3s;
+    }
+    .delivery img:hover { transform: scale(1.02); }
 
-    /* Address Row Horizontal */
-    .address-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; background: rgba(17,17,23,0.9); border-radius: 50px; padding: 30px 25px; backdrop-filter: blur(8px); }
-    .address-card { flex: 1; min-width: 260px; text-align: center; padding: 20px; background: rgba(0,0,0,0.35); border-radius: 32px; }
-    .address-card i { font-size: 2rem; color: #ff7a5c; margin-bottom: 12px; display: block; }
-    .address-card a { color: #ffb47b; text-decoration: none; }
+    /* Contact Grid - 5 items perfectly centered */
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .contact-card {
+      padding: 18px 28px;
+      border-radius: 60px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: 0.25s;
+      font-size: 1rem;
+    }
+    /* Real brand colors */
+    .contact-card.phone { background: #34B7F1; } /* call color */
+    .contact-card.instagram { background: linear-gradient(45deg, #f09433, #d62976, #962fbf, #4f5bd5); }
+    .contact-card.facebook { background: #1877F2; }
+    .contact-card.whatsapp { background: #25D366; }
+    .contact-card:hover { transform: scale(1.05); filter: brightness(1.05); }
+
+    /* Address Row with images */
+    .address-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 50px;
+    }
+    .address-card {
+      flex: 1;
+      min-width: 280px;
+      max-width: 450px;
+      background: linear-gradient(145deg, #1f1f2c, #121217);
+      border-radius: 36px;
+      padding: 25px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid rgba(255,85,85,0.2);
+    }
+    .address-card:hover { transform: translateY(-5px); border-color: #ff6a6a; }
+    .address-card .shop-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 24px;
+      margin-bottom: 20px;
+    }
+    .address-card i { font-size: 2rem; color: #ff7a5c; margin-bottom: 10px; display: inline-block; }
+    .address-card p { margin: 10px 0; }
+    .address-card a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #EA4335;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      margin-top: 12px;
+      transition: 0.2s;
+    }
+    .address-card a:hover { transform: scale(1.02); background: #c5221f; }
 
     footer { text-align: center; padding: 35px 20px; border-top: 1px solid #292933; opacity: 0.8; }
 
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; text-align: center; padding: 50px 24px; }
       .hero h1 { font-size: 2.8rem; }
-      .navbar { flex-direction: column; gap: 15px; }
+      .navbar { flex-direction: column; gap: 15px; padding: 16px 20px; }
       .menu { flex-wrap: wrap; justify-content: center; }
       .section { padding: 55px 24px; }
+      .service-card { width: 100%; max-width: 320px; }
       .shops-horizontal { flex-direction: column; align-items: center; }
       .address-row { flex-direction: column; align-items: center; }
-      .service-card { width: 100%; max-width: 320px; }
+      .contact-card { padding: 12px 20px; font-size: 0.9rem; }
     }
     @media (max-width: 550px) { .hero h1 { font-size: 2.2rem; } }
   </style>
@@ -164,7 +237,7 @@
 
 <nav class="navbar">
   <div class="logo-area">
-    <img src="images/logo.png" alt="Hamiaphone" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect width=%27100%27 height=%27100%27 fill=%27%23ff4d4d%27/%3E%3Ctext x=%2750%27 y=%2767%27 font-size=%2748%27 text-anchor=%27middle%27 fill=%27white%27%3EH%3C/text%3E%3C/svg%3E'">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23ff4d4d'/%3E%3Ctext x='50' y='67' font-size='48' text-anchor='middle' fill='white' font-weight='bold'%3EH%3C/text%3E%3C/svg%3E" alt="Hamiaphone">
     <div><h2>Hamiaphone</h2><p>Réparation & Accessoires</p></div>
   </div>
   <div class="menu">
@@ -184,131 +257,118 @@
       <a href="https://wa.me/213551025000" target="_blank" class="btn green"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
     <div class="socials">
-      <a href="https://instagram.com/hamiaphone_" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://instagram.com/hamiaphone_" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
     </div>
   </div>
   <div class="hero-image">
-    <img src="images/shop-front.jpg" alt="Boutique Hamiaphone" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 600 400%27%3E%3Crect width=%27600%27 height=%27400%27 fill=%27%23222%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ff8c5c%27 text-anchor=%27middle%27%3EBoutique Hamiaphone%3C/text%3E%3C/svg%3E'">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' fill='%23ff8c5c' text-anchor='middle'%3EBoutique Hamiaphone%3C/text%3E%3C/svg%3E" alt="Hamiaphone">
   </div>
 </header>
 
-<!-- SERVICES : 3 dans une rangée + 1 centré en dessous -->
+<!-- SERVICES: 3 top + 1 bottom centered -->
 <section id="services" class="section">
   <h2>Nos Services Premium</h2>
   <div class="services-grid">
     <div class="services-row">
-      <div class="service-card">
-        <i class="fa-solid fa-mobile-screen-button"></i>
-        <h3>Réparation Express</h3>
-        <p>iPhone, Samsung, Huawei – écran, batterie, charge rapide</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-headphones"></i>
-        <h3>Accessoires Originaux</h3>
-        <p>Coques, chargeurs rapides, AirPods, câbles certifiés</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-shield-haltered"></i>
-        <h3>Garantie 6 mois</h3>
-        <p>Toutes réparations garanties, pièces de qualité</p>
-      </div>
+      <div class="service-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Réparation Express</h3><p>iPhone, Samsung, Huawei – écran, batterie, charge rapide</p></div>
+      <div class="service-card"><i class="fa-solid fa-headphones"></i><h3>Accessoires Originaux</h3><p>Coques, chargeurs rapides, AirPods, câbles certifiés</p></div>
+      <div class="service-card"><i class="fa-solid fa-shield-haltered"></i><h3>Garantie 6 mois</h3><p>Toutes réparations garanties, pièces de qualité</p></div>
     </div>
     <div class="single-center">
-      <div class="service-card">
-        <i class="fa-solid fa-bolt"></i>
-        <h3>Rapidité 1h*</h3>
-        <p>Réparation sous 1h pour interventions courantes</p>
-      </div>
+      <div class="service-card"><i class="fa-solid fa-bolt"></i><h3>Rapidité 1h*</h3><p>Réparation sous 1h pour interventions courantes</p></div>
     </div>
   </div>
 </section>
 
-<!-- Pourquoi Hamiaphone -->
+<!-- Stats -->
 <section class="section">
   <h2>Pourquoi Hamiaphone ?</h2>
   <div class="grid">
-    <div class="card"><h3>125K+</h3><p>Followers Instagram</p><i class="fa-brands fa-instagram" style="font-size:2rem; opacity:0.7;"></i></div>
+    <div class="card"><h3>125K+</h3><p>Followers Instagram</p><i class="fa-brands fa-instagram" style="font-size:2rem;"></i></div>
     <div class="card"><h3>4.4 ★</h3><p>Google Rating (245 avis)</p><i class="fa-solid fa-star" style="font-size:2rem; color:#ffcd4a;"></i></div>
     <div class="card"><h3>69</h3><p>Wilayas Livraison</p><i class="fa-solid fa-truck-fast" style="font-size:2rem;"></i></div>
   </div>
 </section>
 
-<!-- Boutiques -->
+<!-- Shops -->
 <section id="shops" class="section">
   <h2>Nos Deux Boutiques à Kouba</h2>
   <div class="shops-horizontal">
     <div class="shop-card">
-      <img src="images/shop-front.jpg" alt="Boutique 76" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 500 300%27%3E%3Crect width=%27500%27 height=%27300%27 fill=%27%23333%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ffa07a%27 text-anchor=%27middle%27%3EBoutique 1%3C/text%3E%3C/svg%3E'">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300'%3E%3Crect width='500' height='300' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffa07a' text-anchor='middle'%3EBoutique 76 Av.%3C/text%3E%3C/svg%3E" alt="Shop 76">
       <h3><i class="fa-solid fa-store"></i> Boutique 1 – Vente & Réparation iPhone</h3>
       <p><i class="fa-solid fa-phone"></i> <a href="tel:+213551025000">0551 025 000</a></p>
       <p><i class="fa-solid fa-location-dot"></i> 76 Av. des Frères Abdeslami, Kouba 16000</p>
       <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
     </div>
     <div class="shop-card">
-      <img src="images/shop2.png" alt="Boutique 116" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 500 300%27%3E%3Crect width=%27500%27 height=%27300%27 fill=%27%23333%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ffa07a%27 text-anchor=%27middle%27%3EBoutique 2%3C/text%3E%3C/svg%3E'">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 500 300'%3E%3Crect width='500' height='300' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffa07a' text-anchor='middle'%3EBoutique 116 Av.%3C/text%3E%3C/svg%3E" alt="Shop 116">
       <h3><i class="fa-solid fa-microchip"></i> Boutique 2 – Réparation & Vente Android/iPhone</h3>
       <p><i class="fa-solid fa-phone"></i> <a href="tel:+213792197104">0792 197 104</a></p>
       <p><i class="fa-solid fa-location-dot"></i> 116 Av. des Frères Abdeslami, Kouba 16000</p>
-      <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Itinéraire Google →</a></div>
+      <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
     </div>
   </div>
 </section>
 
-<!-- Produits -->
+<!-- Products -->
 <section id="products" class="section">
   <h2>Nos Produits & Gadgets</h2>
   <div class="products">
-    <img src="images/product1.png" alt="iPhone" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 400%27%3E%3Crect width=%27400%27 height=%27400%27 fill=%27%23222%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ffaa77%27 text-anchor=%27middle%27%3EiPhone%3C/text%3E%3C/svg%3E'">
-    <img src="images/product2.png" alt="AirPods" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 400%27%3E%3Crect width=%27400%27 height=%27400%27 fill=%27%23222%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ffaa77%27 text-anchor=%27middle%27%3EAirPods%3C/text%3E%3C/svg%3E'">
-    <img src="images/product3.png" alt="Apple Watch" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 400 400%27%3E%3Crect width=%27400%27 height=%27400%27 fill=%27%23222%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ffaa77%27 text-anchor=%27middle%27%3EWatch%3C/text%3E%3C/svg%3E'">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffaa77' text-anchor='middle'%3EiPhone 16%3C/text%3E%3C/svg%3E" alt="iPhone">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffaa77' text-anchor='middle'%3EAirPods%3C/text%3E%3C/svg%3E" alt="AirPods">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23222'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffaa77' text-anchor='middle'%3EWatch%3C/text%3E%3C/svg%3E" alt="Watch">
   </div>
 </section>
 
-<!-- Avis -->
+<!-- Review -->
 <section class="section">
   <h2>Avis Clients ★★★★★</h2>
   <div class="review">
-    <img src="images/client.png" alt="Client" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2745%27 fill=%27%23444%27/%3E%3Ctext x=%2750%27 y=%2767%27 font-size=%2740%27 text-anchor=%27middle%27 fill=%27white%27%3E😊%3C/text%3E%3C/svg%3E'">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23444'/%3E%3Ctext x='50' y='67' font-size='40' text-anchor='middle' fill='white'%3E😊%3C/text%3E%3C/svg%3E" alt="Client">
     <p><i class="fa-solid fa-star" style="color:gold"></i><i class="fa-solid fa-star" style="color:gold"></i><i class="fa-solid fa-star" style="color:gold"></i><i class="fa-solid fa-star" style="color:gold"></i><i class="fa-solid fa-star" style="color:gold"></i></p>
-    <p style="font-style:italic;">“Service ultra rapide, personnel professionnel et produits de qualité.”</p>
+    <p style="font-style:italic;">“Service rapide, personnel professionnel et produits de qualité.”</p>
     <p><strong>— Client satisfait</strong> <i class="fa-brands fa-google"></i></p>
   </div>
 </section>
 
-<!-- Livraison -->
+<!-- Livraison 69 Wilayas - fixed image size inside frame -->
 <section class="section">
   <h2>Livraison 69 Wilayas</h2>
   <div class="delivery">
-    <img src="images/delivery.png" alt="Livraison" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 300 200%27%3E%3Crect width=%27300%27 height=%27200%27 fill=%27%23333%27/%3E%3Ctext x=%2750%25%27 y=%2750%25%27 fill=%27%23ffb48a%27 text-anchor=%27middle%27%3ELivraison%3C/text%3E%3C/svg%3E'">
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffb48a' text-anchor='middle'%3ELivraison%3C/text%3E%3C/svg%3E" alt="Livraison">
     <p><i class="fa-solid fa-truck"></i> Livraison rapide partout en Algérie. Commandez en ligne ou par téléphone, expédition sous 24h.</p>
+    <div style="background:#ff3b3b20; padding: 10px 24px; border-radius:40px;">69 Wilayas couvertes</div>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- Contact & Assistance - perfectly centered with real brand colors -->
 <section id="contact" class="section">
   <h2>Contact & Assistance</h2>
   <div class="contact-grid">
-    <a href="tel:+213792197104" class="contact-card"><i class="fa-solid fa-phone-volume"></i> 0792 197 104</a>
-    <a href="tel:+213551025000" class="contact-card"><i class="fa-solid fa-phone-volume"></i> 0551 025 000</a>
-    <a href="https://instagram.com/hamiaphone_" target="_blank" class="contact-card"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="contact-card"><i class="fab fa-facebook-messenger"></i> Facebook</a>
-    <a href="https://wa.me/213551025000" target="_blank" class="contact-card" style="background:#075E54;"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    <a href="tel:+213792197104" class="contact-card phone"><i class="fa-solid fa-phone-volume"></i> 0792 197 104</a>
+    <a href="tel:+213551025000" class="contact-card phone"><i class="fa-solid fa-phone-volume"></i> 0551 025 000</a>
+    <a href="https://instagram.com/hamiaphone_" target="_blank" class="contact-card instagram"><i class="fab fa-instagram"></i> Instagram</a>
+    <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="contact-card facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <a href="https://wa.me/213551025000" target="_blank" class="contact-card whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
   </div>
 
-  <!-- Adresses sans le mot "cliquables", horizontales -->
+  <!-- Addresses with images attached -->
   <div class="address-row">
     <div class="address-card">
+      <img class="shop-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffa07a' text-anchor='middle'%3EMagasin 76 Av.%3C/text%3E%3C/svg%3E" alt="Boutique 76">
       <i class="fa-solid fa-location-dot"></i>
       <p><strong>76 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
-      <p>Tél: <a href="tel:+213551025000">0551 025 000</a></p>
-      <a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba" target="_blank">Voir sur Google Maps →</a>
+      <p>Tél: <a href="tel:+213551025000" style="color:#ff9f6e;">0551 025 000</a></p>
+      <a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
     </div>
     <div class="address-card">
+      <img class="shop-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23333'/%3E%3Ctext x='50%25' y='50%25' fill='%23ffa07a' text-anchor='middle'%3EMagasin 116 Av.%3C/text%3E%3C/svg%3E" alt="Boutique 116">
       <i class="fa-solid fa-location-dot"></i>
       <p><strong>116 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
-      <p>Tél: <a href="tel:+213792197104">0792 197 104</a></p>
-      <a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba" target="_blank">Voir sur Google Maps →</a>
+      <p>Tél: <a href="tel:+213792197104" style="color:#ff9f6e;">0792 197 104</a></p>
+      <a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
     </div>
   </div>
 </section>
@@ -318,12 +378,10 @@
 </footer>
 
 <script>
-  // Interactive product click
   document.querySelectorAll('.products img').forEach(img => {
-    img.addEventListener('click', () => alert("📱 Produit disponible en boutique ! Contactez-nous pour la livraison."));
+    img.addEventListener('click', () => alert("📱 Produit disponible en boutique ! Contactez-nous."));
     img.style.cursor = 'pointer';
   });
-  // Dynamic year
   document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} Hamiaphone – Vente et Réparation iPhone à Kouba`;
 </script>
 </body>
