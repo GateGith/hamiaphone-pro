@@ -10,6 +10,7 @@
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet" />
   <style>
+    /* ----- RESET & BASE ----- */
     * {
       margin: 0;
       padding: 0;
@@ -24,6 +25,7 @@
       scroll-behavior: smooth;
     }
 
+    /* ----- NAVBAR (centered, flex wrap) ----- */
     .navbar {
       display: flex;
       justify-content: space-between;
@@ -95,19 +97,23 @@
       color: #0b1a2f;
     }
 
+    /* ----- HERO (centered) ----- */
     .hero {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       padding: 3rem 5% 4rem;
       background: linear-gradient(145deg, #ffffff 0%, #f2f6fc 100%);
       flex-wrap: wrap;
       gap: 2rem;
+      text-align: center;
     }
 
     .hero-content {
       flex: 1 1 45%;
       min-width: 280px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
     .hero-content h1 {
@@ -121,7 +127,7 @@
     .hero-content p {
       font-size: 1.15rem;
       color: #2a4058;
-      margin: 1.5rem 0 2rem;
+      margin: 1.5rem auto 2rem;
       max-width: 550px;
     }
 
@@ -129,6 +135,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      justify-content: center;
       margin-bottom: 1.8rem;
     }
 
@@ -173,6 +180,7 @@
       display: flex;
       gap: 1.8rem;
       flex-wrap: wrap;
+      justify-content: center;
       margin-top: 0.5rem;
     }
 
@@ -195,6 +203,8 @@
     .hero-image {
       flex: 1 1 40%;
       min-width: 260px;
+      max-width: 500px;
+      margin: 0 auto;
     }
 
     .hero-image img {
@@ -206,10 +216,12 @@
       background: #d9e2ec;
     }
 
+    /* ----- SECTIONS (centered) ----- */
     .section {
       padding: 4rem 5% 3rem;
       max-width: 1280px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .section h2 {
@@ -219,6 +231,7 @@
       margin-bottom: 2.2rem;
       color: #0b1a2f;
       position: relative;
+      display: inline-block;
     }
 
     .section h2:after {
@@ -227,14 +240,16 @@
       width: 60px;
       height: 4px;
       background: #d42e2e;
-      margin-top: 10px;
+      margin: 10px auto 0;
       border-radius: 4px;
     }
 
+    /* Services */
     .services-grid {
       display: flex;
       flex-direction: column;
       gap: 1.8rem;
+      align-items: center;
     }
 
     .services-row {
@@ -242,11 +257,13 @@
       flex-wrap: wrap;
       gap: 1.8rem;
       justify-content: center;
+      width: 100%;
     }
 
     .single-center {
       display: flex;
       justify-content: center;
+      width: 100%;
     }
 
     .service-card {
@@ -283,6 +300,7 @@
       font-size: 0.95rem;
     }
 
+    /* Stats Grid */
     .grid {
       display: flex;
       flex-wrap: wrap;
@@ -296,6 +314,7 @@
       border-radius: 28px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
       flex: 1 1 180px;
+      max-width: 220px;
       text-align: center;
       border: 1px solid #eef2f6;
     }
@@ -317,6 +336,7 @@
       margin-top: 8px;
     }
 
+    /* Shops */
     .shops-horizontal {
       display: flex;
       flex-wrap: wrap;
@@ -332,6 +352,7 @@
       max-width: 380px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
       border: 1px solid #f0f4f9;
+      text-align: left;
     }
 
     .shop-card img {
@@ -361,13 +382,12 @@
 
     .map-trigger {
       margin-top: 0.8rem;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
       background: #f0f4f9;
       padding: 0.5rem 1rem;
       border-radius: 60px;
-      width: fit-content;
       transition: 0.2s;
     }
 
@@ -375,6 +395,7 @@
       background: #e2e9f2;
     }
 
+    /* Products */
     .products {
       display: flex;
       flex-wrap: wrap;
@@ -398,6 +419,7 @@
       box-shadow: 0 16px 32px rgba(0,0,0,0.08);
     }
 
+    /* Review */
     .review {
       background: #fff;
       padding: 2.2rem;
@@ -417,6 +439,7 @@
       background: #d9e2ec;
     }
 
+    /* Delivery */
     .delivery {
       background: #fff;
       padding: 2.5rem;
@@ -424,8 +447,10 @@
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+      justify-content: center;
       gap: 2rem;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      text-align: center;
     }
 
     .delivery img {
@@ -440,6 +465,7 @@
     .delivery p {
       flex: 1;
       font-size: 1.05rem;
+      min-width: 200px;
     }
 
     .delivery-badge {
@@ -451,6 +477,7 @@
       font-size: 0.9rem;
     }
 
+    /* Contact */
     .contact-grid {
       display: flex;
       flex-wrap: wrap;
@@ -524,6 +551,7 @@
       text-decoration: none;
     }
 
+    /* Footer */
     footer {
       text-align: center;
       padding: 2rem 5%;
@@ -536,22 +564,63 @@
       font-size: 0.95rem;
     }
 
+    /* ----- RESPONSIVE (centered) ----- */
     @media (max-width: 700px) {
-      .navbar { flex-direction: column; align-items: start; gap: 0.5rem; }
-      .menu { gap: 1.2rem; }
-      .hero { flex-direction: column-reverse; text-align: center; }
-      .hero-content p { margin-left: auto; margin-right: auto; }
-      .hero-buttons { justify-content: center; }
-      .socials { justify-content: center; }
-      .section h2 { font-size: 1.8rem; }
+      .navbar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      .logo-area {
+        flex-direction: column;
+        text-align: center;
+      }
+      .menu {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+      }
+      .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-buttons {
+        justify-content: center;
+      }
+      .socials {
+        justify-content: center;
+      }
+      .section h2 {
+        font-size: 1.8rem;
+      }
+      .shop-card {
+        text-align: center;
+      }
+      .map-trigger {
+        justify-content: center;
+        width: 100%;
+      }
+      .delivery {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
     <div class="logo-area">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d42e2e' rx='18'/%3E%3Ctext x='50' y='68' font-family='Inter, sans-serif' font-size='44' font-weight='800' fill='%23fff' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" alt="Hamiaphone">
-      <div><h2>Hamiaphone</h2><p>Réparation & Accessoires</p></div>
+      <!-- LOGO: replace 'images/logo.png' with your actual path -->
+      <img src="images/logo.png" alt="Hamiaphone Logo" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23d42e2e%22 rx=%2218%22/%3E%3Ctext x=%2250%22 y=%2268%22 font-family=%22Inter, sans-serif%22 font-size=%2244%22 font-weight=%22800%22 fill=%22%23fff%22 text-anchor=%22middle%22%3EH%3C/text%3E%3C/svg%3E'" />
+      <div>
+        <h2>Hamiaphone</h2>
+        <p>Réparation & Accessoires</p>
+      </div>
     </div>
     <div class="menu">
       <a href="#services">Services</a>
@@ -561,6 +630,7 @@
     </div>
   </nav>
 
+  <!-- ===== HERO ===== -->
   <header class="hero">
     <div class="hero-content">
       <h1>Votre Téléphone,<br>Notre Priorité</h1>
@@ -570,15 +640,17 @@
         <a href="https://wa.me/213551025000" target="_blank" class="btn green"><i class="fab fa-whatsapp"></i> WhatsApp</a>
       </div>
       <div class="socials">
-        <a href="https://instagram.com/hamiaphone_" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+        <a href="https://instagram.com/hamiaphone_" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a>
       </div>
     </div>
     <div class="hero-image">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23b0c7dd'/%3E%3Ctext x='300' y='210' font-family='Inter' font-size='32' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3Eshop-front%3C/text%3E%3C/svg%3E" alt="Hamiaphone Boutique">
+      <!-- HERO IMAGE: replace 'images/shop-front.jpg' with your actual path -->
+      <img src="images/shop-front.jpg" alt="Hamiaphone Boutique" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22600%22 height=%22400%22 viewBox=%220 0 600 400%22%3E%3Crect width=%22600%22 height=%22400%22 fill=%22%23b0c7dd%22/%3E%3Ctext x=%22300%22 y=%22210%22 font-family=%22Inter%22 font-size=%2232%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3Eshop-front%3C/text%3E%3C/svg%3E'" />
     </div>
   </header>
 
+  <!-- ===== SERVICES ===== -->
   <section id="services" class="section">
     <h2>Nos Services Premium</h2>
     <div class="services-grid">
@@ -593,6 +665,7 @@
     </div>
   </section>
 
+  <!-- ===== STATS ===== -->
   <section class="section">
     <h2>Pourquoi Hamiaphone ?</h2>
     <div class="grid">
@@ -602,18 +675,21 @@
     </div>
   </section>
 
+  <!-- ===== SHOPS ===== -->
   <section id="shops" class="section">
     <h2>Nos Deux Boutiques à Kouba</h2>
     <div class="shops-horizontal">
       <div class="shop-card">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23a0b8d0'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E76%3C/text%3E%3C/svg%3E" alt="Boutique 76">
+        <!-- SHOP 1 IMAGE: replace 'images/shop-front.jpg' with your actual path -->
+        <img src="images/shop-front.jpg" alt="Boutique 76" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%23a0b8d0%22/%3E%3Ctext x=%22200%22 y=%22120%22 font-family=%22Inter%22 font-size=%2230%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E76%3C/text%3E%3C/svg%3E'" />
         <h3><i class="fa-solid fa-store"></i> Boutique 1 – Vente & Réparation iPhone</h3>
         <p><i class="fa-solid fa-phone"></i> <a href="tel:+213551025000">0551 025 000</a></p>
         <p><i class="fa-solid fa-location-dot"></i> 76 Av. des Frères Abdeslami, Kouba 16000</p>
         <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
       </div>
       <div class="shop-card">
-        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%2390a8c0'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E116%3C/text%3E%3C/svg%3E" alt="Boutique 116">
+        <!-- SHOP 2 IMAGE: replace 'images/shop2.png' with your actual path -->
+        <img src="images/shop2.png" alt="Boutique 116" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%2390a8c0%22/%3E%3Ctext x=%22200%22 y=%22120%22 font-family=%22Inter%22 font-size=%2230%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E116%3C/text%3E%3C/svg%3E'" />
         <h3><i class="fa-solid fa-microchip"></i> Boutique 2 – Réparation & Vente Android/iPhone</h3>
         <p><i class="fa-solid fa-phone"></i> <a href="tel:+213792197104">0792 197 104</a></p>
         <p><i class="fa-solid fa-location-dot"></i> 116 Av. des Frères Abdeslami, Kouba 16000</p>
@@ -622,34 +698,41 @@
     </div>
   </section>
 
+  <!-- ===== PRODUCTS ===== -->
   <section id="products" class="section">
     <h2>Nos Produits & Gadgets</h2>
     <div class="products">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='120' font-family='Inter' font-size='28' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E📱%3C/text%3E%3C/svg%3E" alt="iPhone">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='120' font-family='Inter' font-size='28' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E🎧%3C/text%3E%3C/svg%3E" alt="AirPods">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='120' font-family='Inter' font-size='28' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E⌚%3C/text%3E%3C/svg%3E" alt="Watch">
+      <!-- PRODUCT IMAGES: replace with your actual paths -->
+      <img src="images/product1.png" alt="iPhone" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23d9e2ec%22 rx=%2230%22/%3E%3Ctext x=%22100%22 y=%22120%22 font-family=%22Inter%22 font-size=%2228%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E📱%3C/text%3E%3C/svg%3E'" />
+      <img src="images/product2.png" alt="AirPods" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23d9e2ec%22 rx=%2230%22/%3E%3Ctext x=%22100%22 y=%22120%22 font-family=%22Inter%22 font-size=%2228%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E🎧%3C/text%3E%3C/svg%3E'" />
+      <img src="images/product3.png" alt="Watch" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23d9e2ec%22 rx=%2230%22/%3E%3Ctext x=%22100%22 y=%22120%22 font-family=%22Inter%22 font-size=%2228%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E⌚%3C/text%3E%3C/svg%3E'" />
     </div>
   </section>
 
+  <!-- ===== REVIEW ===== -->
   <section class="section">
     <h2>Avis Clients ★★★★★</h2>
     <div class="review">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23b0c7dd'/%3E%3Ctext x='50' y='70' font-family='Inter' font-size='40' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E👤%3C/text%3E%3C/svg%3E" alt="Client">
+      <!-- CLIENT IMAGE: replace 'images/client.png' with your actual path -->
+      <img src="images/client.png" alt="Client" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2248%22 fill=%22%23b0c7dd%22/%3E%3Ctext x=%2250%22 y=%2270%22 font-family=%22Inter%22 font-size=%2240%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E👤%3C/text%3E%3C/svg%3E'" />
       <p><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i></p>
       <p style="font-style:italic;">“Service rapide, personnel professionnel et produits de qualité.”</p>
       <p><strong>— Client satisfait</strong> <i class="fa-brands fa-google"></i></p>
     </div>
   </section>
 
+  <!-- ===== DELIVERY ===== -->
   <section class="section">
     <h2>Livraison 69 Wilayas</h2>
     <div class="delivery">
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='130' font-family='Inter' font-size='60' fill='%230b1a2f' text-anchor='middle'%3E🚚%3C/text%3E%3C/svg%3E" alt="Livraison">
+      <!-- DELIVERY IMAGE: replace 'images/delivery.png' with your actual path -->
+      <img src="images/delivery.png" alt="Livraison" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23d9e2ec%22 rx=%2230%22/%3E%3Ctext x=%22100%22 y=%22130%22 font-family=%22Inter%22 font-size=%2260%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22%3E🚚%3C/text%3E%3C/svg%3E'" />
       <p><i class="fa-solid fa-truck"></i> Livraison rapide partout en Algérie. Commandez en ligne ou par téléphone, expédition sous 24h.</p>
       <div class="delivery-badge">69 Wilayas couvertes</div>
     </div>
   </section>
 
+  <!-- ===== CONTACT ===== -->
   <section id="contact" class="section">
     <h2>Contact & Assistance</h2>
     <div class="contact-grid">
@@ -661,14 +744,16 @@
     </div>
     <div class="address-row">
       <div class="address-card">
-        <img class="shop-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23b0c7dd'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E76%3C/text%3E%3C/svg%3E" alt="Boutique 76">
+        <!-- ADDRESS SHOP 1 IMAGE: replace with your actual path -->
+        <img class="shop-img" src="images/shop-front.jpg" alt="Boutique 76" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%23b0c7dd%22/%3E%3Ctext x=%22200%22 y=%22120%22 font-family=%22Inter%22 font-size=%2230%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E76%3C/text%3E%3C/svg%3E'" />
         <i class="fa-solid fa-location-dot"></i>
         <p><strong>76 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
         <p>Tél: <a href="tel:+213551025000">0551 025 000</a></p>
         <a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
       </div>
       <div class="address-card">
-        <img class="shop-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%2390a8c0'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E116%3C/text%3E%3C/svg%3E" alt="Boutique 116">
+        <!-- ADDRESS SHOP 2 IMAGE: replace with your actual path -->
+        <img class="shop-img" src="images/shop2.png" alt="Boutique 116" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22200%22 viewBox=%220 0 400 200%22%3E%3Crect width=%22400%22 height=%22200%22 fill=%22%2390a8c0%22/%3E%3Ctext x=%22200%22 y=%22120%22 font-family=%22Inter%22 font-size=%2230%22 fill=%22%230b1a2f%22 text-anchor=%22middle%22 font-weight=%22700%22%3E116%3C/text%3E%3C/svg%3E'" />
         <i class="fa-solid fa-location-dot"></i>
         <p><strong>116 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
         <p>Tél: <a href="tel:+213792197104">0792 197 104</a></p>
@@ -677,16 +762,37 @@
     </div>
   </section>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>© 2026 Hamiaphone – Vente et Réparation iPhone à Kouba</p>
   </footer>
 
+  <!-- ===== SCRIPT ===== -->
   <script>
+    // Product click – show availability
     document.querySelectorAll('.products img').forEach(img => {
-      img.addEventListener('click', () => alert("📱 Produit disponible en boutique ! Contactez-nous pour la livraison."));
+      img.addEventListener('click', () => {
+        alert("📱 Produit disponible en boutique ! Contactez-nous pour la livraison.");
+      });
       img.style.cursor = 'pointer';
     });
+
+    // Auto-update footer year
     document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} Hamiaphone – Vente et Réparation iPhone à Kouba`;
+
+    // Smooth scroll for menu links
+    document.querySelectorAll('.menu a').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const targetId = link.getAttribute('href');
+        if (targetId && targetId.startsWith('#')) {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
   </script>
 </body>
 </html>
