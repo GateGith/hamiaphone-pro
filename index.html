@@ -1,156 +1,692 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Hamiaphone | Vente & Réparation iPhone à Kouba – Premium</title>
-  <meta name="description" content="Hamiaphone Kouba Alger : vente iPhone, réparation express, accessoires premium, livraison 69 wilayas. Deux boutiques à Kouba.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Hamiaphone Kouba Alger : vente iPhone, réparation express, accessoires premium, livraison 69 wilayas. Deux boutiques à Kouba." />
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: #f8fafc;
+      color: #0b1a2f;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 5%;
+      background: #ffffff;
+      box-shadow: 0 8px 24px rgba(0, 20, 40, 0.06);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(2px);
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-area img {
+      height: 48px;
+      width: auto;
+      border-radius: 12px;
+      background: #eef2f6;
+      padding: 4px;
+      object-fit: contain;
+    }
+
+    .logo-area h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #0b1a2f, #1e3a5f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.2;
+    }
+
+    .logo-area p {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #4a6a85;
+      margin-top: -2px;
+    }
+
+    .menu {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1f3a57;
+      font-size: 0.95rem;
+      transition: 0.2s ease;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    .menu a:hover {
+      border-bottom-color: #d42e2e;
+      color: #0b1a2f;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 5% 4rem;
+      background: linear-gradient(145deg, #ffffff 0%, #f2f6fc 100%);
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .hero-content {
+      flex: 1 1 45%;
+      min-width: 280px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5.5vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: #0b1a2f;
+    }
+
+    .hero-content p {
+      font-size: 1.15rem;
+      color: #2a4058;
+      margin: 1.5rem 0 2rem;
+      max-width: 550px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0.8rem 2rem;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: 0.2s ease;
+      font-size: 1rem;
+      letter-spacing: 0.3px;
+      border: none;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    }
+
+    .btn.red {
+      background: #d42e2e;
+      color: #fff;
+    }
+
+    .btn.red:hover {
+      background: #b11f1f;
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(212, 46, 46, 0.25);
+    }
+
+    .btn.green {
+      background: #25d366;
+      color: #fff;
+    }
+
+    .btn.green:hover {
+      background: #1ebe5c;
+      transform: scale(1.02);
+      box-shadow: 0 12px 24px rgba(37, 211, 102, 0.25);
+    }
+
+    .socials {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+      margin-top: 0.5rem;
+    }
+
+    .socials a {
+      text-decoration: none;
+      font-weight: 600;
+      color: #1f3a57;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+      font-size: 0.95rem;
+    }
+
+    .socials a:hover {
+      color: #d42e2e;
+      transform: translateY(-2px);
+    }
+
+    .hero-image {
+      flex: 1 1 40%;
+      min-width: 260px;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 32px;
+      box-shadow: 0 30px 50px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      background: #d9e2ec;
+    }
+
+    .section {
+      padding: 4rem 5% 3rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 2.2rem;
+      color: #0b1a2f;
+      position: relative;
+    }
+
+    .section h2:after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #d42e2e;
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    .services-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.8rem;
+    }
+
+    .services-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+    }
+
+    .single-center {
+      display: flex;
+      justify-content: center;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 2rem 1.8rem;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      flex: 1 1 220px;
+      max-width: 300px;
+      transition: 0.25s ease;
+      border: 1px solid rgba(0,0,0,0.02);
+      text-align: center;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px rgba(0, 20, 40, 0.08);
+    }
+
+    .service-card i {
+      font-size: 2.6rem;
+      color: #d42e2e;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .service-card p {
+      color: #3a536e;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .card {
+      background: #fff;
+      padding: 2rem 2.5rem;
+      border-radius: 28px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      flex: 1 1 180px;
+      text-align: center;
+      border: 1px solid #eef2f6;
+    }
+
+    .card h3 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #0b1a2f;
+    }
+
+    .card p {
+      font-weight: 500;
+      color: #3a536e;
+    }
+
+    .card i {
+      font-size: 1.8rem;
+      color: #d42e2e;
+      margin-top: 8px;
+    }
+
+    .shops-horizontal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .shop-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 1.8rem;
+      flex: 1 1 280px;
+      max-width: 380px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      border: 1px solid #f0f4f9;
+    }
+
+    .shop-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 20px;
+      background: #d9e2ec;
+      margin-bottom: 1rem;
+    }
+
+    .shop-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .shop-card p {
+      margin: 0.4rem 0;
+      font-size: 0.95rem;
+    }
+
+    .shop-card a {
+      color: #0b1a2f;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .map-trigger {
+      margin-top: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #f0f4f9;
+      padding: 0.5rem 1rem;
+      border-radius: 60px;
+      width: fit-content;
+      transition: 0.2s;
+    }
+
+    .map-trigger:hover {
+      background: #e2e9f2;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      justify-content: center;
+    }
+
+    .products img {
+      height: 140px;
+      width: auto;
+      background: #eef2f6;
+      padding: 12px;
+      border-radius: 28px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.04);
+      transition: 0.2s;
+      object-fit: contain;
+    }
+
+    .products img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+    }
+
+    .review {
+      background: #fff;
+      padding: 2.2rem;
+      border-radius: 28px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .review img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.8rem;
+      background: #d9e2ec;
+    }
+
+    .delivery {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 28px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    }
+
+    .delivery img {
+      flex: 0 0 120px;
+      height: 100px;
+      object-fit: contain;
+      background: #eef2f6;
+      padding: 12px;
+      border-radius: 24px;
+    }
+
+    .delivery p {
+      flex: 1;
+      font-size: 1.05rem;
+    }
+
+    .delivery-badge {
+      background: #0b1a2f;
+      color: #fff;
+      padding: 0.6rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .contact-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-card {
+      background: #fff;
+      padding: 1rem 2rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      color: #0b1a2f;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.03);
+      border: 1px solid #eef2f6;
+      transition: 0.2s;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.06);
+    }
+
+    .contact-card.phone i { color: #1e3a5f; }
+    .contact-card.instagram i { color: #e4405f; }
+    .contact-card.facebook i { color: #1877f2; }
+    .contact-card.whatsapp i { color: #25d366; }
+
+    .address-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .address-card {
+      background: #fff;
+      padding: 1.8rem;
+      border-radius: 28px;
+      flex: 1 1 260px;
+      max-width: 340px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .address-card .shop-img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 20px;
+      background: #d9e2ec;
+      margin-bottom: 0.8rem;
+    }
+
+    .address-card i {
+      font-size: 1.6rem;
+      color: #d42e2e;
+      margin: 0.2rem 0;
+    }
+
+    .address-card a {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-weight: 600;
+      color: #0b1a2f;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 5%;
+      background: #0b1a2f;
+      color: #b0c7dd;
+      margin-top: 2rem;
+    }
+
+    footer p {
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 700px) {
+      .navbar { flex-direction: column; align-items: start; gap: 0.5rem; }
+      .menu { gap: 1.2rem; }
+      .hero { flex-direction: column-reverse; text-align: center; }
+      .hero-content p { margin-left: auto; margin-right: auto; }
+      .hero-buttons { justify-content: center; }
+      .socials { justify-content: center; }
+      .section h2 { font-size: 1.8rem; }
+    }
+  </style>
 </head>
 <body>
-
-<nav class="navbar">
-  <div class="logo-area">
-    <img src="images/logo.png" alt="Hamiaphone">
-    <div><h2>Hamiaphone</h2><p>Réparation & Accessoires</p></div>
-  </div>
-  <div class="menu">
-    <a href="#services">Services</a>
-    <a href="#shops">Boutiques</a>
-    <a href="#products">Produits</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="hero-content">
-    <h1>Votre Téléphone,<br>Notre Priorité</h1>
-    <p>Vente iPhone, réparation professionnelle, accessoires premium et livraison express dans 69 wilayas. Deux boutiques à Kouba, Alger.</p>
-    <div class="hero-buttons">
-      <a href="tel:+213792197104" class="btn red"><i class="fa-solid fa-phone"></i> Appeler</a>
-      <a href="https://wa.me/213551025000" target="_blank" class="btn green"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <nav class="navbar">
+    <div class="logo-area">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d42e2e' rx='18'/%3E%3Ctext x='50' y='68' font-family='Inter, sans-serif' font-size='44' font-weight='800' fill='%23fff' text-anchor='middle'%3EH%3C/text%3E%3C/svg%3E" alt="Hamiaphone">
+      <div><h2>Hamiaphone</h2><p>Réparation & Accessoires</p></div>
     </div>
-    <div class="socials">
-      <a href="https://instagram.com/hamiaphone_" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
-      <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+    <div class="menu">
+      <a href="#services">Services</a>
+      <a href="#shops">Boutiques</a>
+      <a href="#products">Produits</a>
+      <a href="#contact">Contact</a>
     </div>
-  </div>
-  <div class="hero-image">
-    <img src="images/shop-front.jpg" alt="Hamiaphone Boutique">
-  </div>
-</header>
+  </nav>
 
-<section id="services" class="section">
-  <h2>Nos Services Premium</h2>
-  <div class="services-grid">
-    <div class="services-row">
-      <div class="service-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Réparation Express</h3><p>iPhone, Samsung, Huawei – écran, batterie, charge rapide</p></div>
-      <div class="service-card"><i class="fa-solid fa-headphones"></i><h3>Accessoires Originaux</h3><p>Coques, chargeurs rapides, AirPods, câbles certifiés</p></div>
-      <div class="service-card"><i class="fa-solid fa-shield-haltered"></i><h3>Garantie 6 mois</h3><p>Toutes réparations garanties, pièces de qualité</p></div>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Votre Téléphone,<br>Notre Priorité</h1>
+      <p>Vente iPhone, réparation professionnelle, accessoires premium et livraison express dans 69 wilayas. Deux boutiques à Kouba, Alger.</p>
+      <div class="hero-buttons">
+        <a href="tel:+213792197104" class="btn red"><i class="fa-solid fa-phone"></i> Appeler</a>
+        <a href="https://wa.me/213551025000" target="_blank" class="btn green"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+      <div class="socials">
+        <a href="https://instagram.com/hamiaphone_" target="_blank" class="instagram"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+      </div>
     </div>
-    <div class="single-center">
-      <div class="service-card"><i class="fa-solid fa-bolt"></i><h3>Rapidité 1h*</h3><p>Réparation sous 1h pour interventions courantes</p></div>
+    <div class="hero-image">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23b0c7dd'/%3E%3Ctext x='300' y='210' font-family='Inter' font-size='32' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3Eshop-front%3C/text%3E%3C/svg%3E" alt="Hamiaphone Boutique">
     </div>
-  </div>
-</section>
+  </header>
 
-<section class="section">
-  <h2>Pourquoi Hamiaphone ?</h2>
-  <div class="grid">
-    <div class="card"><h3>125K+</h3><p>Followers Instagram</p><i class="fa-brands fa-instagram"></i></div>
-    <div class="card"><h3>4.4 ★</h3><p>Google Rating (245 avis)</p><i class="fa-solid fa-star"></i></div>
-    <div class="card"><h3>69</h3><p>Wilayas Livraison</p><i class="fa-solid fa-truck-fast"></i></div>
-  </div>
-</section>
-
-<section id="shops" class="section">
-  <h2>Nos Deux Boutiques à Kouba</h2>
-  <div class="shops-horizontal">
-    <div class="shop-card">
-      <img src="images/shop-front.jpg" alt="Boutique 76">
-      <h3><i class="fa-solid fa-store"></i> Boutique 1 – Vente & Réparation iPhone</h3>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+213551025000">0551 025 000</a></p>
-      <p><i class="fa-solid fa-location-dot"></i> 76 Av. des Frères Abdeslami, Kouba 16000</p>
-      <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
+  <section id="services" class="section">
+    <h2>Nos Services Premium</h2>
+    <div class="services-grid">
+      <div class="services-row">
+        <div class="service-card"><i class="fa-solid fa-mobile-screen-button"></i><h3>Réparation Express</h3><p>iPhone, Samsung, Huawei – écran, batterie, charge rapide</p></div>
+        <div class="service-card"><i class="fa-solid fa-headphones"></i><h3>Accessoires Originaux</h3><p>Coques, chargeurs rapides, AirPods, câbles certifiés</p></div>
+        <div class="service-card"><i class="fa-solid fa-shield-haltered"></i><h3>Garantie 6 mois</h3><p>Toutes réparations garanties, pièces de qualité</p></div>
+      </div>
+      <div class="single-center">
+        <div class="service-card"><i class="fa-solid fa-bolt"></i><h3>Rapidité 1h*</h3><p>Réparation sous 1h pour interventions courantes</p></div>
+      </div>
     </div>
-    <div class="shop-card">
-      <img src="images/shop2.png" alt="Boutique 116">
-      <h3><i class="fa-solid fa-microchip"></i> Boutique 2 – Réparation & Vente Android/iPhone</h3>
-      <p><i class="fa-solid fa-phone"></i> <a href="tel:+213792197104">0792 197 104</a></p>
-      <p><i class="fa-solid fa-location-dot"></i> 116 Av. des Frères Abdeslami, Kouba 16000</p>
-      <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
+  </section>
+
+  <section class="section">
+    <h2>Pourquoi Hamiaphone ?</h2>
+    <div class="grid">
+      <div class="card"><h3>125K+</h3><p>Followers Instagram</p><i class="fa-brands fa-instagram"></i></div>
+      <div class="card"><h3>4.4 ★</h3><p>Google Rating (245 avis)</p><i class="fa-solid fa-star"></i></div>
+      <div class="card"><h3>69</h3><p>Wilayas Livraison</p><i class="fa-solid fa-truck-fast"></i></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="products" class="section">
-  <h2>Nos Produits & Gadgets</h2>
-  <div class="products">
-    <img src="images/product1.png" alt="iPhone">
-    <img src="images/product2.png" alt="AirPods">
-    <img src="images/product3.png" alt="Watch">
-  </div>
-</section>
-
-<section class="section">
-  <h2>Avis Clients ★★★★★</h2>
-  <div class="review">
-    <img src="images/client.png" alt="Client">
-    <p><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i></p>
-    <p style="font-style:italic;">“Service rapide, personnel professionnel et produits de qualité.”</p>
-    <p><strong>— Client satisfait</strong> <i class="fa-brands fa-google"></i></p>
-  </div>
-</section>
-
-<section class="section">
-  <h2>Livraison 69 Wilayas</h2>
-  <div class="delivery">
-    <img src="images/delivery.png" alt="Livraison">
-    <p><i class="fa-solid fa-truck"></i> Livraison rapide partout en Algérie. Commandez en ligne ou par téléphone, expédition sous 24h.</p>
-    <div class="delivery-badge">69 Wilayas couvertes</div>
-  </div>
-</section>
-
-<section id="contact" class="section">
-  <h2>Contact & Assistance</h2>
-  <div class="contact-grid">
-    <a href="tel:+213792197104" class="contact-card phone"><i class="fa-solid fa-phone-volume"></i> 0792 197 104</a>
-    <a href="tel:+213551025000" class="contact-card phone"><i class="fa-solid fa-phone-volume"></i> 0551 025 000</a>
-    <a href="https://instagram.com/hamiaphone_" target="_blank" class="contact-card instagram"><i class="fab fa-instagram"></i> Instagram</a>
-    <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="contact-card facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
-    <a href="https://wa.me/213551025000" target="_blank" class="contact-card whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-  </div>
-
-  <div class="address-row">
-    <div class="address-card">
-      <img class="shop-img" src="images/shop-front.jpg" alt="Boutique 76">
-      <i class="fa-solid fa-location-dot"></i>
-      <p><strong>76 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
-      <p>Tél: <a href="tel:+213551025000">0551 025 000</a></p>
-      <a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
+  <section id="shops" class="section">
+    <h2>Nos Deux Boutiques à Kouba</h2>
+    <div class="shops-horizontal">
+      <div class="shop-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23a0b8d0'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E76%3C/text%3E%3C/svg%3E" alt="Boutique 76">
+        <h3><i class="fa-solid fa-store"></i> Boutique 1 – Vente & Réparation iPhone</h3>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+213551025000">0551 025 000</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> 76 Av. des Frères Abdeslami, Kouba 16000</p>
+        <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
+      </div>
+      <div class="shop-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%2390a8c0'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E116%3C/text%3E%3C/svg%3E" alt="Boutique 116">
+        <h3><i class="fa-solid fa-microchip"></i> Boutique 2 – Réparation & Vente Android/iPhone</h3>
+        <p><i class="fa-solid fa-phone"></i> <a href="tel:+213792197104">0792 197 104</a></p>
+        <p><i class="fa-solid fa-location-dot"></i> 116 Av. des Frères Abdeslami, Kouba 16000</p>
+        <div class="map-trigger"><i class="fa-brands fa-google"></i><a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba+Alger" target="_blank">Ouvrir dans Google Maps →</a></div>
+      </div>
     </div>
-    <div class="address-card">
-      <img class="shop-img" src="images/shop2.png" alt="Boutique 116">
-      <i class="fa-solid fa-location-dot"></i>
-      <p><strong>116 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
-      <p>Tél: <a href="tel:+213792197104">0792 197 104</a></p>
-      <a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
+  </section>
+
+  <section id="products" class="section">
+    <h2>Nos Produits & Gadgets</h2>
+    <div class="products">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='120' font-family='Inter' font-size='28' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E📱%3C/text%3E%3C/svg%3E" alt="iPhone">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='120' font-family='Inter' font-size='28' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E🎧%3C/text%3E%3C/svg%3E" alt="AirPods">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='120' font-family='Inter' font-size='28' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E⌚%3C/text%3E%3C/svg%3E" alt="Watch">
     </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <p>© 2026 Hamiaphone – Vente et Réparation iPhone à Kouba</p>
-</footer>
+  <section class="section">
+    <h2>Avis Clients ★★★★★</h2>
+    <div class="review">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23b0c7dd'/%3E%3Ctext x='50' y='70' font-family='Inter' font-size='40' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E👤%3C/text%3E%3C/svg%3E" alt="Client">
+      <p><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i><i class="fa-solid fa-star" style="color:#ffcd4a"></i></p>
+      <p style="font-style:italic;">“Service rapide, personnel professionnel et produits de qualité.”</p>
+      <p><strong>— Client satisfait</strong> <i class="fa-brands fa-google"></i></p>
+    </div>
+  </section>
 
-<script>
-  document.querySelectorAll('.products img').forEach(img => {
-    img.addEventListener('click', () => alert("📱 Produit disponible en boutique ! Contactez-nous pour la livraison."));
-    img.style.cursor = 'pointer';
-  });
-  document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} Hamiaphone – Vente et Réparation iPhone à Kouba`;
-</script>
+  <section class="section">
+    <h2>Livraison 69 Wilayas</h2>
+    <div class="delivery">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Crect width='200' height='200' fill='%23d9e2ec' rx='30'/%3E%3Ctext x='100' y='130' font-family='Inter' font-size='60' fill='%230b1a2f' text-anchor='middle'%3E🚚%3C/text%3E%3C/svg%3E" alt="Livraison">
+      <p><i class="fa-solid fa-truck"></i> Livraison rapide partout en Algérie. Commandez en ligne ou par téléphone, expédition sous 24h.</p>
+      <div class="delivery-badge">69 Wilayas couvertes</div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2>Contact & Assistance</h2>
+    <div class="contact-grid">
+      <a href="tel:+213792197104" class="contact-card phone"><i class="fa-solid fa-phone-volume"></i> 0792 197 104</a>
+      <a href="tel:+213551025000" class="contact-card phone"><i class="fa-solid fa-phone-volume"></i> 0551 025 000</a>
+      <a href="https://instagram.com/hamiaphone_" target="_blank" class="contact-card instagram"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://www.facebook.com/share/17ffhRon5N/" target="_blank" class="contact-card facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="https://wa.me/213551025000" target="_blank" class="contact-card whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+    <div class="address-row">
+      <div class="address-card">
+        <img class="shop-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%23b0c7dd'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E76%3C/text%3E%3C/svg%3E" alt="Boutique 76">
+        <i class="fa-solid fa-location-dot"></i>
+        <p><strong>76 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
+        <p>Tél: <a href="tel:+213551025000">0551 025 000</a></p>
+        <a href="https://www.google.com/maps/search/?api=1&query=76+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
+      </div>
+      <div class="address-card">
+        <img class="shop-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='200' viewBox='0 0 400 200'%3E%3Crect width='400' height='200' fill='%2390a8c0'/%3E%3Ctext x='200' y='120' font-family='Inter' font-size='30' fill='%230b1a2f' text-anchor='middle' font-weight='700'%3E116%3C/text%3E%3C/svg%3E" alt="Boutique 116">
+        <i class="fa-solid fa-location-dot"></i>
+        <p><strong>116 Av. des Frères Abdeslami</strong><br>Kouba 16000</p>
+        <p>Tél: <a href="tel:+213792197104">0792 197 104</a></p>
+        <a href="https://www.google.com/maps/search/?api=1&query=116+Av.+des+Frères+Abdeslami+Kouba" target="_blank"><i class="fa-brands fa-google"></i> Voir sur Google Maps →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Hamiaphone – Vente et Réparation iPhone à Kouba</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.products img').forEach(img => {
+      img.addEventListener('click', () => alert("📱 Produit disponible en boutique ! Contactez-nous pour la livraison."));
+      img.style.cursor = 'pointer';
+    });
+    document.querySelector('footer p').innerHTML = `© ${new Date().getFullYear()} Hamiaphone – Vente et Réparation iPhone à Kouba`;
+  </script>
 </body>
 </html>
